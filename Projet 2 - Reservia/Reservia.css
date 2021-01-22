@@ -1,25 +1,25 @@
 
 body {
-    display: block;
-    margin:25px 75px 25px 75px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin:auto;
+    max-width: 1440px;
     font-family: 'Raleway', sans-serif;
 }
-#page-wrap {
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 /* Header */
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between ;
+    max-width: 1440px;
 }
 nav {
-    display: inline-block;
-    margin-right: 0;;
-    justify-content: right;
-    justify-items: right;
+    display: flex;
+    flex: 2;
+    width: auto;
+    justify-content: flex-end;
 }
 p {
     font-size: 17px;
@@ -30,7 +30,8 @@ a {
 }
 #logo {
     display: flex;
-    flex-direction: row;
+    flex: 1;
+    justify-content: flex-start;
     align-items: baseline;
 }
 #logo img {
@@ -71,12 +72,18 @@ h1 {
 }
 #description p {
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 /*filter*/
+#filterhead {
+    display: flex;
+    flex-direction: column;   
+}
 form {
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 600px;
 }
 .searchloc {
     border-style:solid;
@@ -84,20 +91,22 @@ form {
     background-color: #F2F2F2;
     border-radius: 7px 0px 0px 7px;
     justify-content: center;
-    padding: 9px;   
+    padding: 12px;   
 }
 input {
-    padding: 9.5px;
+    padding: 12.5px;
+    width: 270px;
     border-style: solid ;
     border-color: #F2F2F2;
     border-right-color: none;
 }
 button {
+    display: flex;
     background-color:  #0065FC;
     border-radius: 0px 7px 7px 0px;
     color: white;
     border-style: none;
-    padding: 11px;
+    padding: 14.5px;
 }
 #filters {
     display: flex;
@@ -107,14 +116,16 @@ button {
     margin-right: 30px;
 }
 #filters ul {
+    display: flex;
+    gap: 30px;
     list-style-type: none;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 17px;    
 }
 #filters li {
-    margin-right: 30px;
-    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;    
     transition: transform .2s;
 }
 li i.fas {
@@ -125,18 +136,21 @@ li i.fas {
     color:#0065FC;
     border-style: none;
     padding: 20px;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
     text-align: center;
     margin-left: -4px;
     margin-top: -2px;
     margin-bottom: -2px;
 }
+#filters ul {
+    font-size: 10px bold;
+}
 li a {
     text-align: center;
-    padding-right: 25px;
-    font-weight: 583;
+    padding-right: 20px;
+    font-weight: 700;
 }
 #filters li {
     display: flex;
@@ -188,88 +202,104 @@ li a {
     gap: 30px;  
 }
 #liste_hotel {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color:#F2F2F2;
     border-radius: 30px;
+    padding: 30px;
 }
 #hotelmarseille {
-    columns: 3;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 265px 265px ;
+    grid-template-columns: 210px 210px 210px;
+    grid-gap: 40px;  
     border-radius: 30px;
-    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#detail_hotel {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    padding-left: 7px;
 }
 #cannebière {
+    order: 1;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
     align-items: center;
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #cannebière img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
-}
-#detail_hotel {
-    display: block;
-    padding: 0px 5px ;
-    margin: 2px;
-    width:300px ;
-    height: 50px;
-}
-h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 #cannebière:hover {
     transform:scale(1.025,1.025);
 }
 #port {
+    order: 3;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196); 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #port img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
-}
-#port h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #port:hover {
     transform:scale(1.025,1.025);
 }
 #mouettes {
+    order: 5;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196); 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
 }
 #mouettes img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
@@ -283,90 +313,95 @@ h3 {
     transform:scale(1.025,1.025);
 }
 #la_mer {
+    order: 2;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
-    align-items: center; 
-    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
+    align-items: center;
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);      
 }
 #la_mer img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
-}
-#la_mer h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #la_mer:hover {
     transform:scale(1.025,1.025);
 }
 #panier {
+    order: 4;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
-    align-items: center; 
-    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
+    align-items: center;
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);      
 }
 #panier img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
-}
-#panier h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #panier:hover {
     transform:scale(1.025,1.025);
 }
 #amina {
+    order: 6;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 300px;
-    height: 250px;
+    width: 265px;
+    height: 210px;
     justify-content: center;
-    align-items: center;  
-    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);   
+    align-items: center;
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #amina img {
     display: flex;
-    width: 300px;
-    height: 170px;
+    flex: 2;
+    width: 265px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
-}
-#amina h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #amina:hover {
     transform:scale(1.025,1.025);
 }
 /*liste populaire*/
 #liste_populaire {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+    flex-direction: row;
+    flex-direction: column;
     background-color:#F2F2F2;
     border-radius: 20px;
+    padding: 30px;
 }
 #title_liste {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-items: center;
 }
 #chart {
@@ -376,30 +411,48 @@ h3 {
     width: 11px;
     height: 11px;
 }
+#hotel_description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding-right: 30px;
+}
+#space {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0px;
+    margin: 30px;
+}
+#starpop {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0px;
+}
 #soleil {
     display: flex;
+    flex-wrap: wrap;
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 400px;
+    width: 450px;
     height: 150px;
-    justify-content: center;
-    align-items: center; 
+    justify-content:baseline;
+    align-content: center; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #soleil img {
     display: flex;
     width: 170px;
     height: 150px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 0px 0px 20px;
-}
-#soleil h3, p {
-    display: flex;
-    flex-direction: column;
-    text-align: ;
-    margin: 2px;
 }
 #soleil:hover {
     transform:scale(1.025,1.025)
@@ -409,9 +462,9 @@ h3 {
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 400px;
+    width: 450px;
     height: 150px;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);      
 }
@@ -419,14 +472,11 @@ h3 {
     display: flex;
     width: 170px;
     height: 150px;
+    object-fit: cover;
+    object-position: 50% 30%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 0px 0px 20px;
-}
-#chambre_dhotes h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #chambre_dhotes:hover {
     transform:scale(1.025,1.025)
@@ -436,10 +486,10 @@ h3 {
     background-color:#ffffff ;
     border-radius: 25px;
     padding: 7px;
-    width: 400px;
+    width: 450px;
     height: 150px;
     overflow: hidden;
-    justify-content: center;
+    justify-content: baseline;
     align-items: center; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);   
 }
@@ -447,14 +497,11 @@ h3 {
     display: flex;
     width: 170px;
     height: 150px;
+    object-fit: cover;
+    object-position: 50% 50%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 0px 0px 20px;
-}
-#bleu_blanc h3, p {
-    text-align: left;
-    padding: 0px ;
-    margin: 2px;
 }
 #bleu_blanc:hover {
     transform:scale(1.025,1.025)
@@ -462,36 +509,47 @@ h3 {
 /*activites*/
 #activités {
     display: flex;
-    gap: 10px;
-    flex-direction: column; 
-    columns: 2; 
+    flex-direction: column;
+    gap: 40px;  
+    align-items: baseline;
+    border-radius: 30px;
+    position: relative;
 }
 #activités_marseille {
     display: flex;
-    gap: 10px; 
+    width: 1700px;
+    flex-wrap: wrap;
+    gap: 30px; 
     columns: 3;
 }
 #A {
-    display: block;
-    columns: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 650px;
+    width: 800px;
 }
 #B {
-    display: block;
-    columns: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 800px;
+    height: 650px;
 }
 #vieux_port {
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color:#ffffff ;
     border-radius: 25px;
-    width: 375px;
-    height: 600px;
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #vieux_port img {
-    width: 375px;
-    height: 530px;
+    width: 400px; 
+    height: 580px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
@@ -501,17 +559,16 @@ h3 {
 } 
 #pomègues {
     display: flex;
+    flex: 3;
     flex-direction: column;
     background-color:#ffffff ;
-    border-radius: 25px;
-    width: 375px;
-    height: 300px;
+    border-radius: 25px;   
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
 }
 #pomègues img {
     width: 375px;
-    height: 230px;
+    height: 300px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
@@ -521,17 +578,17 @@ h3 {
 }
 #frioul {
     display: flex;
+    flex: 2;
     flex-direction: column;
     background-color:#ffffff ;
     border-radius: 25px;
-    width: 375px;
-    height: 300px;
+    
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
 }
 #frioul img {
     width: 375px;
-    height: 230px;
+    height: 180px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
@@ -541,17 +598,16 @@ h3 {
 }
 #calanques {
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color:#ffffff ;
     border-radius: 25px;
-    width: 375px;
-    height: 600px;
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
 }
 #calanques img {
-    width: 375px;
-    height: 530px;
+    width: 400px; 
+    height: 580px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
@@ -561,17 +617,16 @@ h3 {
 }
 #garde {
     display: flex;
+    flex: 3;
     flex-direction: column;
     background-color:#ffffff ;
     border-radius: 25px;
-    width: 375px;
-    height: 300px;
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
 }
 #garde img {
     width: 375px;
-    height: 230px;
+    height: 300px;;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
@@ -581,17 +636,16 @@ h3 {
 }
 #longchamp {
     display: flex;
+    flex: 2;
     flex-direction: column;
     background-color:#ffffff ;
     border-radius: 25px;
-    width: 375px;
-    height: 300px;
     object-fit: cover; 
     -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
 }
 #longchamp img {
     width: 375px;
-    height: 230px;
+    height: 180px;
     object-fit: cover;
     object-position: 50% 30%;
     border-radius: 25px 25px 0px 0px;
