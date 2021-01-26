@@ -375,7 +375,7 @@ h3 {
     margin: 2px;
 }
 .space {
-    flex: 1;
+    flex: 6;
 }
 #title_liste {
     display: flex;
