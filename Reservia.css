@@ -573,6 +573,15 @@ footer li, h2 {
     body {
         font-family: 'Raleway', sans-serif;
     }
+    h1 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 15px;
+    }
+    h3 {
+        font-size: 1em;
+    }
     header {
         display: grid;
         grid-template-areas: "logo . signup" "nav nav nav";
@@ -610,6 +619,43 @@ footer li, h2 {
     #hotel {
         display: flex;
         flex-direction: column-reverse;
+    }
+    #liste_hotel {
+        background-color: #ffffff;
+        padding: 20px;
+    }
+    #liste_populaire {
+        padding: 20px;
+    }
+    #popmarseille {
+        grid-gap: 12px;
+    }
+    .space {
+        margin: 15px;
+    }
+    #hotelmarseille .hotel {
+        padding: 5px;
+    }
+    #hotelmarseille {
+        grid-gap: 12px;
+    }
+    #popmarseille .pophotel {
+        padding: 5px;
+    }
+    #popmarseille .pophotel img {
+        display: flex;
+        width: 110px ;
+        height: 100%;
+        margin: 0px;
+        object-fit: cover;
+        object-position: 50% 30%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 0px 0px 20px;
+    }
+    #popmarseille .hotel_description {
+        width: 100%;
+        padding: 5px 18px 5px 12px;
     }
     #activités_marseille {
         display: grid;
