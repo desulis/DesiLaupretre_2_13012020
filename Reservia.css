@@ -642,7 +642,7 @@ footer li, h2 {
     #popmarseille .pophotel img {
         display: flex;
         width: 110px ;
-        height: 100%;
+       
         margin: 0px;
         object-fit: cover;
         object-position: 50% 30%;
