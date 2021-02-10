@@ -57,6 +57,7 @@ a {
     flex-direction: row;  
     font-size: 20px; 
     align-items: center;
+    color: #0065FC;
 }
 nav ul {
     list-style-type: none;
@@ -115,7 +116,7 @@ form {
     display: flex;
 }
 #search {
-    flex: 1;
+    flex: 16;
 }
 input {
     padding: 18px 25px;
@@ -154,7 +155,7 @@ button a, button a:visited {
 #filters ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
     list-style-type: none;
     align-items: center;
     font-size: 17px;    
@@ -182,7 +183,7 @@ li i.fas {
 }
 li a {
     text-align: center;
-    padding-right: 20px;
+    padding-right: 10px;
     font-weight: 700;
 }
 #filters li {
@@ -546,16 +547,15 @@ h3 {
 footer {
     background-color:#F2F2F2 ;
     display: flex;
-    margin: 50px 0;
-    width: 100%;
-    padding: 30px ;
+    margin: 50px 0 0 0;
+    
+    padding: 35px 0px 35px 35px;
     justify-content: space-between;
 }
 footer .footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 30px;
 }
 footer ul {
     list-style-type: none;
@@ -566,9 +566,22 @@ footer li, h2 {
     margin: 12px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media screen and (max-width: 599px) {
     body {
         font-family: 'Raleway', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;   
+        width: 100vmin;   
+    }
+    main {
+        width: 100%;
+    }
+    section {
+        gap: 0;
+    }
+    #description {
+        padding: 20px;
     }
     h1 {
         font-size: 25px;
@@ -581,6 +594,7 @@ footer li, h2 {
     }
     header {
         display: grid;
+        
         grid-template-areas: "logo . signup" "nav nav nav";
         grid-template-columns: auto 1fr auto;   
         grid-template-rows: 1fr 1fr;
@@ -596,16 +610,34 @@ footer li, h2 {
     }
     nav ul {
         flex: 1;
+        border-bottom: solid 3px #d4d4d4;
     }
+    nav li:hover , nav .active{
+        border-bottom:#0065FC 3px solid ;
+        border-top: none;
+        margin-bottom: -6px;
+    }
+
     #form {
         display: inline-flex;
         flex-direction: row;
-        width: 100%;    
+        
+        padding: 0 20px 0 20px;    
+    }
+    #search {
+        flex: 16;        
+    }
+    #info {
+        padding: 0 20px 0 20px;
     }
     .searchloc , input, button, button a {
         display: flex; 
+        flex: 1;
         max-height:100px;
-        padding: 15px;
+        padding: 15px;     
+    }
+    button {
+        border-radius: 15px 15px 15px 15px;
     }
     .textsearch {
         display: none;
@@ -613,16 +645,51 @@ footer li, h2 {
     .iconsearch {
         display: flex;
     }
+    #filterhead {
+        display: flex;
+        padding: 0;
+    }
+    #filters ul {
+        display: flex;
+        flex-flow: wrap;
+        justify-content:baseline;
+        margin: 0;
+    }
+    #filters h2 {
+        margin: 20px 0 0 20px;
+    }
+    #form {
+    
+    }
+    ul {
+        padding: 20px;
+        margin: 0;
+    }
+    .menupage {
+        padding: 0;
+        gap:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #titre h2 {
+        margin: 0;
+    }
     #hotel {
         display: flex;
         flex-direction: column-reverse;
+        gap: 10px;
     }
     #liste_hotel {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 20px;    
+    }
+    #hotel .morelist {
+        padding: 0;
     }
     #liste_populaire {
-        padding: 20px;
+        border-radius: 0;
+        padding:20px ;
     }
     #popmarseille {
         grid-gap: 12px;
@@ -654,6 +721,12 @@ footer li, h2 {
         width: 100%;
         padding: 5px 18px 5px 12px;
     }
+    #activités {
+        padding: 20px;
+        display: flex;
+        gap: 0;
+
+    }
     #activités_marseille {
         display: grid;
         grid-template-areas: none;
@@ -662,6 +735,8 @@ footer li, h2 {
         border-radius: 30px;
         align-items: center;
         margin: 10px 0;
+        width: 100%;
+    
     }
     #activités_marseille .activité {
         grid-area:unset;
@@ -671,6 +746,9 @@ footer li, h2 {
     }
     footer {
         display: flex;
+        margin: 0;
         flex-direction: column;
+        justify-content: space-between;
+        
     }
 }
