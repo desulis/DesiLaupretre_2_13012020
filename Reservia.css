@@ -273,7 +273,7 @@ li a {
     width: 100%;
     height: 130px;
     object-fit: cover;
-    object-position: 50% 30%;
+    object-position: 50% 50%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0px 0px;
@@ -329,6 +329,7 @@ h3 {
     flex-direction: column;
     background-color:#F2F2F2;
     border-radius: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 #popmarseille {
     display: flex;
@@ -563,7 +564,24 @@ footer ul {
 footer li, h2 {
     margin: 12px;
 }
+@media screen and (max-width: 1439px) {
 
+    #liste_hotel {
+        order: 2;
+    }
+    #liste_populaire {
+        order: 1;
+    }
+    #popmarseille {
+        display: flex;
+    }
+    #hotel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+   
+}
 @media screen and (max-width: 599px) {
     body {
         font-family: 'Raleway', sans-serif;
@@ -671,11 +689,6 @@ footer li, h2 {
     }
     #titre h2 {
         margin: 0;
-    }
-    #hotel {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 10px;
     }
     #liste_hotel {
         background-color: #ffffff;
