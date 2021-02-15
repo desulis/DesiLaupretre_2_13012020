@@ -33,7 +33,7 @@ p {
 }
 a {
     text-decoration: none;
-    color: black;
+    color: black; 
 }
 #logo {
     display: flex;
@@ -76,6 +76,12 @@ nav li {
 nav li:hover , nav .active{
     border-top:#0065FC 3px solid ;
 }
+a:visited {
+    color: black;
+}
+.active a, .signup a {
+    color :#0065FC;
+}
 /*description*/
 h1 {
     font-size: 32px;   
@@ -90,9 +96,7 @@ h1 {
 a:hover {
     color: black;
 }
-a:visited {
-    color: black;
-}
+
 /*filter*/
 #filterhead {
     display: flex;
