@@ -1,10 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
     margin:auto;
-    box-sizing: content-box;
     width: 100%;
     max-width: 1440px;
     font-family: 'Raleway', sans-serif;
@@ -332,15 +329,12 @@ h3 {
     flex-direction: column;
     background-color:#F2F2F2;
     border-radius: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 #popmarseille {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     grid-gap: 30px;  
     border-radius: 30px;
-    align-items: center;
-    justify-content: space-between;
 }
 #popmarseille .pophotel {
     display: flex;
@@ -597,8 +591,7 @@ footer li, h2 {
         font-size: 1em;
     }
     header {
-        display: grid;
-        
+        display: grid;        
         grid-template-areas: "logo . signup" "nav nav nav";
         grid-template-columns: auto 1fr auto;   
         grid-template-rows: 1fr 1fr;
@@ -732,9 +725,8 @@ footer li, h2 {
 
     }
     #activités_marseille {
-        display: grid;
-        grid-template-areas: none;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        display: flex;
+        flex-direction: column;
         grid-gap: 30px;  
         border-radius: 30px;
         align-items: center;
