@@ -351,8 +351,7 @@ h3 {
 }
 #popmarseille .pophotel img {
     display: flex;
-    width: 140px ;
-    
+    width: 140px ;    
     margin: 0px;
     object-fit: cover;
     object-position: 50% 30%;
@@ -362,7 +361,6 @@ h3 {
 }
 #popmarseille .hotel_description {
     display: flex;   
-    width: 100%;
     padding: 5px 7px;
     flex-direction: column;
     align-items: baseline;  
@@ -583,7 +581,11 @@ footer li, h2 {
         flex-direction: column;
         gap: 10px;
     }
-   
+   #activités {
+       display: flex;
+       flex-direction: column;
+       align-items: stretch;
+   }
 }
 @media screen and (max-width: 599px) {
     body {
@@ -671,10 +673,16 @@ footer li, h2 {
         display: flex;
         flex-flow: wrap;
         justify-content:baseline;
-        margin: 0;
+        margin-left: -8px;
+        padding: 17px;
     }
     #filters h2 {
         margin: 20px 0 0 20px;
+    }
+    #filters li i.fas {
+        width: 10px;
+        height: 10px;
+        padding: 17px;
     }
     #form {
     
@@ -721,8 +729,7 @@ footer li, h2 {
     }
     #popmarseille .pophotel img {
         display: flex;
-        width: 110px ;
-       
+        width: 110px ;       
         margin: 0px;
         object-fit: cover;
         object-position: 50% 30%;
@@ -731,13 +738,13 @@ footer li, h2 {
         border-radius: 20px 0px 0px 20px;
     }
     #popmarseille .hotel_description {
-        width: 100%;
         padding: 5px 18px 5px 12px;
     }
     #activités {
-        padding: 20px;
         display: flex;
         gap: 0;
+        width: 100%;
+        align-items: stretch;
 
     }
     #activités_marseille {
@@ -745,13 +752,12 @@ footer li, h2 {
         flex-direction: column;
         grid-gap: 30px;  
         border-radius: 30px;
-        align-items: center;
-        margin: 10px 0;
-        width: 100%;
-    
+        align-items: stretch;
+        justify-content: stretch;
+        padding: 20px;    
     }
     #activités_marseille .activité {
-        grid-area:unset;
+        
     }
     #activités_marseille img {
         height: 150px;
