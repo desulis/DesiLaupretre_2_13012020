@@ -145,6 +145,9 @@ button a, button a:visited {
 .iconsearch {
     display: none;
 }
+#search input {
+    font-family: 'Raleway';
+}
 #filters {
     display: flex;
     flex-wrap: wrap;
