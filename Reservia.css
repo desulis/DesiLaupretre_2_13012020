@@ -672,7 +672,6 @@ footer li, h2 {
     #filters ul {
         display: flex;
         flex-flow: wrap;
-        justify-content:baseline;
         margin-left: -8px;
         padding: 17px;
     }
